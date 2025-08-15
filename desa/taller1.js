@@ -18,21 +18,19 @@ function mejorParidad(num){
     return num % 2 === 0
 }
 
-function peorParidad(num){
-    console.log("makeit")
-    while(num>=2){
-        num = num / 2
-        console.log(num)
+function peorParidad(n) {
+    while (n > 1) {
+        if (n / 2 !== Math.floor(n / 2)) {
+            return false;
+        }
+        n = Math.floor(n / 2);
     }
-    if(num===1){
-        esPar = true
-    }else{
-        esPar = false
-    }
-    return esPar
+
+    return true;
 }
 
 //console.log(convertidorTemp(100))
 //console.log(resolvedor(1,5,4,false))
 //console.log(mejorParidad(2))
 //console.log(peorParidad(8))
+
