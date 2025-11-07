@@ -8,11 +8,11 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Conectar las rutas de cada taller
 app.use("/api/taller01", taller01Routes);
 app.use("/api/taller02", taller02Routes);
 app.use("/api/taller03", taller03Routes);
 
 app.listen(PORT, () => {
   console.log(`Server up at http://localhost:${PORT}`);
+
 });
